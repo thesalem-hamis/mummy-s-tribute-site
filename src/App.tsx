@@ -581,17 +581,6 @@ const FONTS = `
 @media (prefers-reduced-motion: reduce) { .bm .shimmer { animation: none; } .bm .glow-btn, .bm .glow-card { transition: none; } }
 `
 
-function Portrait({ className = '', alt = '', src = PHOTO }: { className?: string; alt?: string; src?: string }) {
-  const [bad, setBad] = useState(false)
-  if (!src || bad) {
-    return (
-      <div role="img" aria-label={alt || undefined} className={`${className} head flex items-center justify-center text-7xl`}
-        style={{ background: `linear-gradient(160deg, ${PURPLE_MID}, ${PURPLE})`, color: GOLD_SOFT }}>BM</div>
-    )
-  }
-  return <img src={src} alt={alt} onError={() => setBad(true)} className={`${className} object-cover object-top`} />
-}
-
 /* Hero: no background image, no "Read tributes" button, no marquee. Background comes from the shared wrapper. */
 function GridOverlay() {
   return <div aria-hidden="true" className="grid-dark pointer-events-none absolute inset-0" />
