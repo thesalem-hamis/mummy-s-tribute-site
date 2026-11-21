@@ -51,8 +51,8 @@ const initials = (n: string) => n.split(/\s+/).filter(Boolean).slice(0, 2).map(w
 const LIFE: { when: string; title: string; text: string }[] = [
   { when: '1938', title: 'Born', text: 'Aimiugwina Angel was born, a daughter of the Ojeme lineage of Ewu, Edo State.' },
   { when: 'A life of faith', title: 'Devoted to Christ', text: 'A devoted Christian, she was known for her unwavering faith, humility and kindness to all who encountered her.' },
-  { when: 'A mother of seven', title: 'Matriarch', text: 'She was the mother of Pastor Chris Oyakhilome, Rev. Ken Oyakhilome and Kathy Woghiren, Pastor Linda Okocha, Pastor Lovelian, Pastor Beayeta Akhuemokhan, Pastor Mercy Oyakhilome and a mother figure to many others.' },
-  { when: '25 September 2026', title: 'Passed into glory', text: 'She departed this earthly realm, leaving behind an enduring legacy of love, faith and kindness that will never fade.' },
+  { when: 'A mother of seven', title: 'Matriarch', text: 'She was the month of our Life coach Pastor Chris Oyakhilome, Rev. Ken Oyakhilome, Evng. Dr. Kathy  Woghiren, Pastor Linda Okocha, Pastor Mercy Oyakhilome, Pastor Lovelina Osazuwa, Pastor Beayeta Akhuemokhan and a mother in Israel to many of us.' },
+  { when: '25 September 2026', title: 'Passed into glory', text: 'Mummy went to be with the Lord leaving behind an enduring legacy of love, faith and kindness that will never fade away.' },
 ]
 
 
@@ -152,7 +152,7 @@ function Memorial() {
               className="text-sm font-extrabold uppercase tracking-wide sm:text-base"
               style={{ color: '#fde047' }}
             >
-              Forever In Our Hearts
+Forever in Our Hearts
             </p>
           </div>
 
@@ -281,7 +281,8 @@ function LightsAndForm({ total, onPosted }: { total: number; onPosted: (t: NewTr
     e.preventDefault()
     const f = e.currentTarget, d = new FormData(f)
     if (d.get('website')) return
-    const row: NewTribute = { name: String(d.get('name')).trim(), location: String(d.get('location')).trim() || null,
+    const row: NewTribute = { name: String(d.get('name')).trim(), email: String(d.get('email')).trim(),
+      location: String(d.get('location')).trim() || null,
       zone: String(d.get('zone')).trim() || null, role, message: msg.trim() }
     onPosted(row)
     setDone(row.zone ?? ''); setMsg(''); f.reset()
@@ -307,11 +308,15 @@ function LightsAndForm({ total, onPosted }: { total: number; onPosted: (t: NewTr
               <div className="grid gap-5 sm:grid-cols-2">
                 <label className={label} style={{ color: GOLD_SOFT }}><span>Your full name{star}</span>
                   <input name="name" required minLength={2} maxLength={80} placeholder="e.g. Grace Okafor" className={inp} style={field} /></label>
+                <label className={label} style={{ color: GOLD_SOFT }}><span>Email{star}</span>
+                  <input name="email" type="email" required maxLength={120} placeholder="e.g. grace@example.com" className={inp} style={field} /></label>
+              </div>
+              <div className="grid gap-5 sm:grid-cols-2">
                 <label className={label} style={{ color: GOLD_SOFT }}><span>City / country</span>
                   <input name="location" maxLength={80} placeholder="e.g. Lagos, Nigeria" className={inp} style={field} /></label>
+                <label className={label} style={{ color: GOLD_SOFT }}><span>Zone <span className="font-normal normal-case tracking-normal text-white/60">(optional)</span></span>
+                  <input name="zone" maxLength={60} placeholder="Becomes your #ZoneName" className={inp} style={field} /></label>
               </div>
-              <label className={label} style={{ color: GOLD_SOFT }}><span>Zone <span className="font-normal normal-case tracking-normal text-white/60">(optional)</span></span>
-                <input name="zone" maxLength={60} placeholder="Becomes your #ZoneName" className={inp} style={field} /></label>
               <div>
                 <p className={label} style={{ color: GOLD_SOFT }}>I am a</p>
                 <div className="mt-2 flex flex-wrap gap-2.5">
@@ -363,6 +368,7 @@ function Card({ t, onHeart }: { t: Tribute; onHeart: (id: string) => void }) {
           <p className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-neutral-500">
             <span className="rounded-full px-3 py-0.5 text-xs font-semibold" style={{ background: '#fff4d6', color: '#8a5a00' }}>{t.role}</span>
             {[t.zone, t.location].filter(Boolean).map((x, i) => <span key={`${i}-${x}`}>{x}</span>)}
+            {t.email && <span className="text-neutral-400">{t.email}</span>}
           </p>
         </div>
       </div>

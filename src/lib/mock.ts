@@ -17,7 +17,7 @@ const PLACES = ['Lagos, Nigeria', 'Accra, Ghana', 'Pretoria, South Africa', 'Lon
 
 const now = Date.now()
 const seed: Tribute[] = Array.from({ length: 64 }, (_, i) => ({
-  id: `mock-${i}`, name: NAMES[i % NAMES.length], location: PLACES[i % PLACES.length], zone: ZONES[(i * 3) % ZONES.length],
+  id: `mock-${i}`, name: NAMES[i % NAMES.length], email: `${NAMES[i % NAMES.length].toLowerCase().replace(/[^a-z]/g, '')}@example.com`, location: PLACES[i % PLACES.length], zone: ZONES[(i * 3) % ZONES.length],
   role: ROLES[(i * 2) % ROLES.length], message: MSGS[(i * 5) % MSGS.length], hearts: (i * 7) % 23,
   created_at: new Date(now - i * 7 * 60_000).toISOString(),
 }))

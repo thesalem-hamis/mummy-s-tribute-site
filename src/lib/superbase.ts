@@ -2,7 +2,7 @@ import { createClient } from '@supabase/supabase-js'
 import { PAGE_SIZE, type Tribute, type TributeApi } from './types'
 
 const db = createClient(import.meta.env.VITE_SUPABASE_URL as string, import.meta.env.VITE_SUPABASE_ANON_KEY as string)
-const COLS = 'id,name,location,zone,role,message,hearts,created_at'
+const COLS = 'id,name,email,location,zone,role,message,hearts,created_at'
 
 export const supabaseApi: TributeApi = {
   async list({ role, zone, before }) {

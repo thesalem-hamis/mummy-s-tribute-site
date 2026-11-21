@@ -6,6 +6,7 @@ export const PAGE_SIZE = 20
 export type Tribute = {
   id: string
   name: string
+  email: string
   location: string | null
   zone: string | null
   role: (typeof ROLES)[number]
@@ -13,7 +14,7 @@ export type Tribute = {
   hearts: number
   created_at: string
 }
-export type NewTribute = Pick<Tribute, 'name' | 'location' | 'zone' | 'role' | 'message'>
+export type NewTribute = Pick<Tribute, 'name' | 'email' | 'location' | 'zone' | 'role' | 'message'>
 export type ZoneRow = { label: string; total: number }
 export type ListOpts = { role?: string; zone?: string; before?: string }
 
