@@ -1,5 +1,6 @@
 export const ROLES = ['Teenager', 'Youth', 'Church member', 'Leader / Pastor', 'Family & friend'] as const
 export const TARGET = 1_000_000
+export const BASE_TOTAL = 24_318
 export const PAGE_SIZE = 20
 
 export type Tribute = {
