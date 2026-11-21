@@ -50,9 +50,9 @@ const initials = (n: string) => n.split(/\s+/).filter(Boolean).slice(0, 2).map(w
 /* Edit these freely as you gather more verified details. */
 const LIFE: { when: string; title: string; text: string }[] = [
   { when: '1938', title: 'Born', text: 'Aimiugwina Angel was born, a daughter of the Ojeme lineage of Ewu, Edo State.' },
-  { when: 'A life of faith', title: 'Devoted to Christ', text: 'A devoted Christian known for her faith, humility and kindness to all who met her.' },
-  { when: 'A mother of three', title: 'Matriarch', text: 'Mother of Pastor Chris Oyakhilome, Rev. Ken Oyakhilome and Kathy Woghiren, and mother to many more.' },
-  { when: '25 September 2026', title: 'Passed into glory', text: 'She departed this earthly realm, leaving a legacy of love that will not fade.' },
+  { when: 'A life of faith', title: 'Devoted to Christ', text: 'A devoted Christian, she was known for her unwavering faith, humility and kindness to all who encountered her.' },
+  { when: 'A mother of three', title: 'Matriarch', text: 'She was the mother of Pastor Chris Oyakhilome, Rev. Ken Oyakhilome and Kathy Woghiren, Pastor Linda Okocha, Pastor Lovelian, Pastor Beayeta Akhuemokhan, Pastor Mercy Oyakhilome and a mother figure to many others.' },
+  { when: '25 September 2026', title: 'Passed into glory', text: 'She departed this earthly realm, leaving behind an enduring legacy of love, faith and kindness that will never fade.' },
 ]
 
 
@@ -104,7 +104,7 @@ function Hero({ total }: { total: number }) {
         <Pill dark>A Celebration of a Glorious Life Well Lived</Pill>
         <h1 className="mt-6 text-5xl font-bold leading-[1.08] sm:text-7xl shimmer" style={GRAD_TEXT}>Celebrating Big Mommy's Legacy</h1>
         <p className="head mt-5 text-xl font-semibold sm:text-2xl"><span style={{ color: '#e9d5ff' }}>Deaconess Angel Oyakhilome</span><span style={{ color: '#fcd34d' }}> • 1938 – 2026 (88 Years)</span></p>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed" style={{ color: LILAC_TEXT }}>Forever in our hearts • Thank you Mummy for your glorious legacy of love, faith, motherly warmth, and devotion to children around the world.</p>
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed" style={{ color: LILAC_TEXT }}>Forever in our hearts, Mummy. Thank you for a glorious legacy of love, faith, motherly warmth and devotion that continues to inspire generations around the world.</p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <a href="#write" className="glow-btn rounded-full px-8 py-3.5 font-bold" style={{ background: 'linear-gradient(90deg, #fcd34d, #f59e0b)', color: PURPLE }}>Write a tribute</a>
         </div>
