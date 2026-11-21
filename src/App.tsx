@@ -132,22 +132,17 @@ function Memorial() {
       >
         {/* One wide memorial image, presented as a single banner */}
         <div className="relative w-full overflow-hidden bg-[#2e0755]">
-          <img
-            src={PHOTO}
-            alt="Deaconess Angel Oyakhilome"
-            className="mx-auto block h-auto max-h-[26rem] w-auto max-w-full object-contain object-center sm:max-h-[30rem]"
-          />
+            <img
+              src={PHOTO}
+              alt="Deaconess Angel Oyakhilome"
+              className="block w-full h-[26rem] object-cover object-center sm:h-[30rem]"
+            />
         </div>
 
         {/* Anniversary badge strip styled like the supplied reference */}
         <div className="flex flex-col items-center justify-between gap-4 px-5 py-5 sm:flex-row sm:px-6">
           <div className="flex items-center gap-3 text-center sm:text-left">
-            <span
-              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-extrabold"
-              style={{ background: '#fbbf24', color: '#2e1065' }}
-            >
-              88
-            </span>
+            
             <p
               className="text-sm font-extrabold uppercase tracking-wide sm:text-base"
               style={{ color: '#fde047' }}
@@ -159,7 +154,7 @@ Forever in Our Hearts
           <a
             href="#write"
             className="glow-btn btn-pulse inline-flex shrink-0 items-center gap-2 rounded-full px-6 py-2.5 text-sm font-extrabold text-white"
-            style={{ background: '#ff850f' }}
+            style={{ background: '#fddf47d5' }}
           >
             Write Something Beautiful <span aria-hidden="true">♥</span>
           </a>
@@ -490,9 +485,19 @@ export default function App() {
 
       <footer className="relative px-5 py-10 text-white" style={{ background: PURPLE }}>
         <GridOverlay />
-        <div className="relative mx-auto flex max-w-6xl flex-col gap-3 text-sm text-white/80 sm:flex-row sm:items-center sm:justify-between">
-          <p>Deaconess Angel Oyakhilome • A Glorious Celebration of 88 Triumphant Years.</p>
-          <p>© 2026 LoveWorld Teens & Youth Ministry.</p>
+        <div className="relative mx-auto flex max-w-6xl flex-col gap-4 text-sm text-white/80 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center gap-4 sm:gap-6">
+            <img
+              src="/mummys-logo.jpeg"
+              alt="Deaconess Angel Oyakhilome"
+              className="h-12 w-12 rounded-full object-cover sm:h-14 sm:w-14 border border-white/20"
+            />
+            <div className="text-left">
+              <p className="leading-none">Deaconess Angel Oyakhilome</p>
+              <p className="text-xs leading-none opacity-70">A Glorious Celebration of 88 Triumphant Years.</p>
+            </div>
+          </div>
+          <p className="leading-none">© 2026 LoveWorld Teens &amp; Youth Ministry.</p>
         </div>
       </footer>
     </div>
