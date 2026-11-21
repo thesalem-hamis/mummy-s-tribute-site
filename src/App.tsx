@@ -1,7 +1,10 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type FormEvent, type ReactNode } from 'react'
 import dcnImage from './assets/dcn.png'
 import { api } from './lib/api'
-import { ROLES, PAGE_SIZE, BASE_TOTAL, TARGET, type Tribute, type NewTribute } from './lib/types'
+import { createClient } from '@supabase/supabase-js'
+import { ROLES, PAGE_SIZE, TARGET, type Tribute, type NewTribute } from './lib/types'
+
+const supabase = createClient(import.meta.env.VITE_SUPABASE_URL as string, import.meta.env.VITE_SUPABASE_ANON_KEY as string)
 
 /* ------------------------------------------------------------------
    UI ONLY. No database, no API, no extra imports.
@@ -376,7 +379,7 @@ function Card({ t, onHeart }: { t: Tribute; onHeart: (id: string) => void }) {
 
 export default function App() {
   const [items, setItems] = useState<Tribute[]>([])
-  const [total, setTotal] = useState(BASE_TOTAL)
+  const [total, setTotal] = useState(0)
   const [role, setRole] = useState('All')
   const [visible, setVisible] = useState(PAGE_SIZE)
   const [loading, setLoading] = useState(true)
@@ -390,7 +393,7 @@ export default function App() {
         api.total()
       ])
       setItems(tributes)
-      setTotal(BASE_TOTAL + totalCount)
+      setTotal(totalCount)
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Failed to load tributes')
       console.error(e)
@@ -401,6 +404,23 @@ export default function App() {
 
   useEffect(() => {
     loadData()
+
+    const channel = supabase
+      .channel('tributes-realtime')
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'tributes' }, () => {
+        loadData()
+      })
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'tribute_stats' }, (payload) => {
+        const newRow = payload.new as { total?: number } | null
+        if (newRow && typeof newRow.total === 'number') {
+          setTotal(newRow.total)
+        }
+      })
+      .subscribe()
+
+    return () => {
+      supabase.removeChannel(channel)
+    }
   }, [role])
 
   async function handlePost(tribute: NewTribute) {
