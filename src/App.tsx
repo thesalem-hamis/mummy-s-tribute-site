@@ -198,7 +198,7 @@ function TLItem({ className, children }: { className: string; children: ReactNod
 function Timeline() {
   return (
     <section className="mx-auto max-w-4xl px-5 py-20">
-      <h2 className="text-center text-4xl font-semibold" style={{ color: PURPLE }}>Her life, remembered</h2>
+      <h2 className="text-center text-4xl font-semibold" style={{ color: PURPLE }}>A Glorious Life Well Spent</h2>
       <ol className="relative mt-12">
         <div aria-hidden="true" className="absolute bottom-2 left-3 top-2 w-px -translate-x-1/2 md:left-1/2" style={{ background: GOLD }} />
         {LIFE.map((e, i) => {
