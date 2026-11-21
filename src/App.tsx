@@ -152,7 +152,7 @@ function Memorial() {
               className="text-sm font-extrabold uppercase tracking-wide sm:text-base"
               style={{ color: '#fde047' }}
             >
-              Celebrating 88 Triumphant & Blessed Years
+              Forever In Our Hearts
             </p>
           </div>
 
@@ -486,7 +486,7 @@ export default function App() {
         <GridOverlay />
         <div className="relative mx-auto flex max-w-6xl flex-col gap-3 text-sm text-white/80 sm:flex-row sm:items-center sm:justify-between">
           <p>Deaconess Angel Oyakhilome • A Glorious Celebration of 88 Triumphant Years.</p>
-          <p>© 2026 LoveWorld Teens & Youth Ministry. All Rights Reserved.</p>
+          <p>© 2026 LoveWorld Teens & Youth Ministry.</p>
         </div>
       </footer>
     </div>
