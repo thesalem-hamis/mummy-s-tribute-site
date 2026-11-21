@@ -101,7 +101,7 @@ function Hero({ total }: { total: number }) {
   return (
     <header id="top" className="relative overflow-hidden text-white">
       <div className="relative mx-auto flex min-h-[34rem] max-w-4xl flex-col items-center justify-center px-5 py-24 text-center sm:min-h-[44rem]">
-        <Pill dark>A Celebration of a Glorious Life Well Lived</Pill>
+        <Pill dark>Forever In Our Hearts</Pill>
         <h1 className="mt-6 text-5xl font-bold leading-[1.08] sm:text-7xl shimmer" style={GRAD_TEXT}>Celebrating Big Mommy's Legacy</h1>
         <p className="head mt-5 text-xl font-semibold sm:text-2xl"><span style={{ color: '#e9d5ff' }}>Deaconess Angel Oyakhilome</span><span style={{ color: '#fcd34d' }}> • 1938 – 2026 (88 Years)</span></p>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed" style={{ color: LILAC_TEXT }}>Forever in our hearts, Mummy. Thank you for a glorious legacy of love, faith, motherly warmth and devotion that continues to inspire generations around the world.</p>
