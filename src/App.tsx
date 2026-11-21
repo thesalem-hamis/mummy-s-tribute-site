@@ -103,7 +103,7 @@ function Hero({ total }: { total: number }) {
       <div className="relative mx-auto flex min-h-[34rem] max-w-4xl flex-col items-center justify-center px-5 py-24 text-center sm:min-h-[44rem]">
         <Pill dark>Forever In Our Hearts</Pill>
         <h1 className="mt-6 text-5xl font-bold leading-[1.08] sm:text-7xl shimmer" style={GRAD_TEXT}>Celebrating Big Mommy's Legacy</h1>
-        <p className="head mt-5 text-xl font-semibold sm:text-2xl"><span style={{ color: '#e9d5ff' }}>Deaconess Angel Oyakhilome</span><span style={{ color: '#fcd34d' }}> • 1938 – 2026 (88 Years)</span></p>
+        <p className="head mt-5 text-xl font-semibold sm:text-2xl"><span style={{ color: '#e9d5ff' }}>Deaconess Angel Oyakhilome</span><span style={{ color: '#fcd34d' }}> • 1938 – 2026 </span></p>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed" style={{ color: LILAC_TEXT }}>Forever in our hearts, Mummy. Thank you for a glorious legacy of love, faith, motherly warmth and devotion that continues to inspire generations around the world.</p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <a href="#write" className="glow-btn rounded-full px-8 py-3.5 font-bold" style={{ background: 'linear-gradient(90deg, #fcd34d, #f59e0b)', color: PURPLE }}>Write a tribute</a>
