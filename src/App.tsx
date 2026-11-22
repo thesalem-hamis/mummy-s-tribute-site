@@ -51,7 +51,7 @@ const initials = (n: string) => n.split(/\s+/).filter(Boolean).slice(0, 2).map(w
 const LIFE: { when: string; title: string; text: string }[] = [
   { when: '1938', title: 'Born', text: 'Aimiugwina Angel was born, a daughter of the Ojeme lineage of Ewu, Edo State.' },
   { when: 'A life of faith', title: 'Devoted to Christ', text: 'A devoted Christian, she was known for her unwavering faith, humility and kindness to all who encountered her.' },
-  { when: 'A mother of seven', title: 'Matriarch', text: 'She was the month of our Life coach Pastor Chris Oyakhilome, Rev. Ken Oyakhilome, Evng. Dr. Kathy  Woghiren, Pastor Linda Okocha, Pastor Mercy Oyakhilome, Pastor Lovelina Osazuwa, Pastor Beayeta Akhuemokhan and a mother in Israel to many of us.' },
+  { when: 'A mother of seven', title: 'Matriarch', text: 'She was the mother of our Life coach Pastor Chris Oyakhilome, Rev. Ken Oyakhilome, Evng. Dr. Kathy  Woghiren, Pastor Linda Okocha, Pastor Mercy Oyakhilome, Pastor Lovelina Osazuwa, Pastor Beayeta Akhuemokhan and a mother in Israel to many of us.' },
   { when: '25 September 2026', title: 'Passed into glory', text: 'Mummy went to be with the Lord leaving behind an enduring legacy of love, faith and kindness that will never fade away.' },
 ]
 
