@@ -222,8 +222,7 @@ function VideoTribute() {
         <GridOverlay />
       <div className="text-center">
         <Pill dark>In Memory</Pill>
-        <h2 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl shimmer" style={{ background: 'linear-gradient(90deg, #fde68a 0%, #ffffff 45%, #fcd34d 100%)', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent', WebkitTextFillColor: 'transparent', filter: 'drop-shadow(0 0 18px rgba(252,211,77,0.55))' }}>A Final Farewell</h2>
-        <p className="mt-3 text-center text-lg font-semibold" style={{ color: '#fde68a', textShadow: '0 0 14px rgba(252,211,77,0.4)' }}>A tribute to a life of love, faith and devotion.</p>
+        <h2 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl shimmer" style={{ background: 'linear-gradient(90deg, #fde68a 0%, #ffffff 45%, #fcd34d 100%)', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent', WebkitTextFillColor: 'transparent', filter: 'drop-shadow(0 0 18px rgba(252,211,77,0.55))' }}>Big Mummy Lives On!</h2>
       </div>
       <div className="relative mt-10 overflow-hidden rounded-[2rem] border-[3px] shadow-[0_24px_80px_rgba(0,0,0,.45)]"
         style={{ borderColor: 'rgba(232,196,106,.8)', background: '#2e0755' }}>
@@ -235,7 +234,6 @@ function VideoTribute() {
           className="block w-full h-auto max-h-[34rem] object-contain object-center sm:max-h-[42rem]"
         />
       </div>
-      <p className="mt-6 text-center text-base font-bold" style={{ color: '#fde68a', textShadow: '0 0 12px rgba(252,211,77,0.45)' }}>25 September 2026 — Passed into glory. Forever in our hearts.</p>
     </section>
   )
 }
